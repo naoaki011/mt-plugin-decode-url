@@ -1,0 +1,12 @@
+name: decode_url
+id: decode_url
+version: 1.0
+tags:
+ modifier:
+  decode_url: >
+   sub {
+    use MT::Util qw( decode_url );
+    my ($str, $arg, $ctx) = @_;
+    return $str if $arg != 1;
+    return MT::Util::decode_url($str);
+   }
